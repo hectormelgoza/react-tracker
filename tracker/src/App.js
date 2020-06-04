@@ -12,9 +12,8 @@ function App() {
         <Router>
         <Link className="add-btn" to="/account">Add Account</Link>
         <Route path="/" component={ShowAccounts} />
-        <Route path="/account" component={Add} />
+        <Route path="/accounts" component={Add} />
         </Router>
-      
       </div>
   );
 }
