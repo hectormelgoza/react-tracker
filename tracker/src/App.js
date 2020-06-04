@@ -2,6 +2,7 @@ import React from 'react'
 import {Route, Link, BrowserRouter as Router} from 'react-router-dom'
 import Welcome  from './components/Welcome'
 import Add from './components/Add'
+import ShowAccounts from './components/ShowAccounts'
 import './App.css';
 
 function App() {
@@ -9,8 +10,9 @@ function App() {
       <div className="main-container">
         <Welcome />
         <Router>
-        <Link className="add-btn" to="/add">Add Account</Link>
-        <Route path="/add" component={Add} />
+        <Link className="add-btn" to="/account">Add Account</Link>
+        <Route path="/" component={ShowAccounts} />
+        <Route path="/account" component={Add} />
         </Router>
       
       </div>

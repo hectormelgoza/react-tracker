@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
+import axios from 'axios';
 
 export default class Add extends Component {
   constructor(props) {
@@ -17,17 +18,15 @@ export default class Add extends Component {
       user: '',
       password: '',
       date: new Date(),
-      users: []
     }
   }
 
-/*   componentDidMount() {
-    axios.get('http://localhost:5000/users/')
+  componentDidMount() {
+    axios.get('http://localhost:3000/accounts/')
       .then(response => {
         if (response.data.length > 0) {
           this.setState({
-            users: response.data.map(user => user.username),
-            username: response.data[0].username
+            name: response.data.map(name => name.name),
           })
         }
       })
@@ -35,7 +34,7 @@ export default class Add extends Component {
         console.log(error);
       })
 
-  } */
+  }
 
   onChangeName(e) {
     this.setState({
@@ -64,18 +63,18 @@ export default class Add extends Component {
   onSubmit(e) {
     e.preventDefault();
 
-    const exercise = {
-      username: this.state.username,
-      description: this.state.description,
-      duration: this.state.duration,
+    const account = {
+      name: this.state.name,
+      user: this.state.user,
+      password: this.state.password,
       date: this.state.date
     }
 
-    console.log(exercise);
+    console.log(account);
 
-   /*  axios.post('http://localhost:5000/exercises/add', exercise)
+    axios.post('http://localhost:3000/accounts/add', account)
       .then(res => console.log(res.data));
-    window.location = '/'; */
+    window.location = '/';
   }
 
   render() {
