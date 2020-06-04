@@ -1,9 +1,12 @@
 const router = require('express').Router();
-let Account = require('../models/account.model');
+
+const Account = require('../models/account.model');
 
 router.route('/').get((req, res) => {
   Account.find()
-    .then(account => res.json(account))
+    .then(accounts => {
+      return res.json(accounts);
+    })
     .catch(err => res.status(400).json('Error: ' + err));
 });
 
@@ -22,23 +25,23 @@ router.route('/add').post((req, res) => {
   });
 
   newAccount.save()
-  .then(() => res.json('account added!'))
+  .then(() => res.json('account added!!!'))
   .catch(err => res.status(400).json('Error: ' + err));
 });
 
-/* router.route('/:id').get((req, res) => {
+/*  router.route('/:id').get((req, res) => {
   Exercise.findById(req.params.id)
     .then(exercise => res.json(exercise))
     .catch(err => res.status(400).json('Error: ' + err));
-});
+}); */
 
 router.route('/:id').delete((req, res) => {
-  Exercise.findByIdAndDelete(req.params.id)
-    .then(() => res.json('Exercise deleted.'))
+  Account.findByIdAndDelete(req.params.id)
+    .then(() => res.json('Account deleted!!'))
     .catch(err => res.status(400).json('Error: ' + err));
 });
 
-router.route('/update/:id').post((req, res) => {
+/* router.route('/update/:id').post((req, res) => {
   Exercise.findById(req.params.id)
     .then(exercise => {
       exercise.username = req.body.username;
@@ -51,6 +54,6 @@ router.route('/update/:id').post((req, res) => {
         .catch(err => res.status(400).json('Error: ' + err));
     })
     .catch(err => res.status(400).json('Error: ' + err));
-});*/
+}); */
 
 module.exports = router; 
