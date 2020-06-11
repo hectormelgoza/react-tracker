@@ -21,21 +21,6 @@ export default class Add extends Component {
     }
   }
 
-  componentDidMount() {
-    axios.get('http://localhost:3000/accounts/')
-      .then(response => {
-        if (response.data.length > 0) {
-          this.setState({
-            name: response.data.map(name => name.name),
-          })
-        }
-      })
-      .catch((error) => {
-        console.log(error);
-      })
-
-  }
-
   onChangeName(e) {
     this.setState({
       name: e.target.value
@@ -72,19 +57,24 @@ export default class Add extends Component {
 
     console.log(account);
 
-    axios.post('http://localhost:3000/accounts/add', account)
-      .then(res => console.log(res.data));
+    axios.post('http://localhost:4000/api/add', account)
+    .then(() => {
+      console.log('Data has been sent to the server');
+    })
+    
     window.location = '/';
   }
 
   render() {
+    console.log("State: ", this.state)
     return (
     <div>
       <h3>Simply sumbit form to add account</h3>
       <form onSubmit={this.onSubmit}>
         <div className="form-group"> 
           <label>Name: </label>
-          <input  type="text"
+          <input  
+              type="text"
               required
               className="form-control"
               value={this.state.name}
@@ -93,7 +83,8 @@ export default class Add extends Component {
         </div>
         <div className="form-group"> 
           <label>User: </label>
-          <input  type="text"
+          <input  
+              type="text"
               required
               className="form-control"
               value={this.state.user}
