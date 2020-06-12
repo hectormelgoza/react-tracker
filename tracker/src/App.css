@@ -11,8 +11,27 @@
   border-radius: 3rem;
   background-color: rgb(52, 164, 75);
 }
-
-
+h4{
+  font-size: 3rem;
+}
+.account-item{
+  background-color: rgb(49, 179, 249);
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 2rem;
+  border-radius: 2rem;
+  padding: 4rem 0rem;
+}
+.btn-view{
+  border: none;
+  text-decoration: nones;
+  border-radius: 1rem;
+  background-color: rgb(36, 213, 116);
+}
+h3{
+  text-align: center;
+}
 
 
 
