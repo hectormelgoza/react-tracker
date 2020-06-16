@@ -1,9 +1,10 @@
 const router = require('express').Router();
 
-const Account = require('../models/account.model');
+let Account = require('../models/account.model');
+
 router.route('/').get((req, res) => {
   Account.find()
-    .then(hatt => res.json(hatt))
+    .then(accounts => res.json(accounts))
     .catch(err => res.status(400).json('Error: Did not find anything!' + err));
 });
 
@@ -32,25 +33,25 @@ router.route('/add').post((req, res) => {
     .catch(err => res.status(400).json('Error: ' + err));
 }); */
 
-/* router.route('/:id').delete((req, res) => {
+router.route('/:id').delete((req, res) => {
   Account.findByIdAndDelete(req.params.id)
     .then(() => res.json('Account deleted!!'))
     .catch(err => res.status(400).json('Error: ' + err));
-}); */
+});
 
-/* router.route('/update/:id').post((req, res) => {
-  Exercise.findById(req.params.id)
-    .then(exercise => {
-      exercise.username = req.body.username;
-      exercise.description = req.body.description;
-      exercise.duration = Number(req.body.duration);
-      exercise.date = Date.parse(req.body.date);
+router.route('/update/:id').post((req, res) => {
+  Account.findById(req.params.id)
+    .then(acc => {
+      acc.name = req.body.name;
+      acc.user = req.body.user;
+      acc.password = req.body.password;
+      acc.date = Date.parse(req.body.date);
 
-      exercise.save()
-        .then(() => res.json('Exercise updated!'))
+      acc.save()
+        .then(() => res.json('Account updated!'))
         .catch(err => res.status(400).json('Error: ' + err));
     })
     .catch(err => res.status(400).json('Error: ' + err));
-}); */
+});
 
 module.exports = router; 
