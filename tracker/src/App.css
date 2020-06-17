@@ -4,15 +4,13 @@
   background-color: coral;
   text-align: center;
 }
-.add-btn{
-  text-decoration: none;
-  color: white;
-  padding: 1rem 4rem;
-  border-radius: 3rem;
-  background-color: rgb(52, 164, 75);
-}
+
 h4{
-  font-size: 3rem;
+  font-size: 2rem;
+}
+h3{
+  margin: 2rem 0rem;
+  text-align: center;
 }
 .account-item{
   background-color: rgb(49, 179, 249);
@@ -20,8 +18,8 @@ h4{
   width: 80%;
   margin: auto;
   margin-bottom: 2rem;
-  border-radius: 2rem;
-  padding: 4rem 0rem;
+  border-radius: 1.5rem;
+  padding: 2.5rem 0rem;
 }
 .btn-view{
   border: none;
@@ -29,9 +27,7 @@ h4{
   border-radius: 1rem;
   background-color: rgb(36, 213, 116);
 }
-h3{
-  text-align: center;
-}
+
 
 
 
