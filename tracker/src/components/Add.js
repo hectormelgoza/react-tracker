@@ -69,7 +69,7 @@ export default class Add extends Component {
     console.log("State: ", this.state)
     return (
     <div>
-      <h3>Simply sumbit form to add account</h3>
+      <h3>Submit form to add account!</h3>
       <form onSubmit={this.onSubmit}>
         <div className="form-group"> 
           <label>Name: </label>
@@ -111,7 +111,7 @@ export default class Add extends Component {
         </div>
 
         <div className="form-group">
-          <input type="submit" value="Enter" className="btn btn-primary" />
+          <input type="submit" value="Submit" className="btn btn-primary" />
         </div>
       </form>
     </div>
