@@ -68,7 +68,7 @@ const Account = props => {
       return (
         <div>
           <h3>Accounts</h3>
-          <div>{this.accountList()}</div>
+          <div>{this.accountList}</div>
         </div>
       )
     }

@@ -21,11 +21,11 @@ h3{
   border-radius: 1.5rem;
   padding: 2.5rem 0rem;
 }
-.btn-view{
+.btn-delete{
   border: none;
   text-decoration: nones;
   border-radius: 1rem;
-  background-color: rgb(36, 213, 116);
+  background-color: rgb(221, 50, 38);
 }
 
 

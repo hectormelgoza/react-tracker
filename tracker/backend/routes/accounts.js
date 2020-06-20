@@ -4,7 +4,7 @@ let Account = require('../models/account.model');
 
 router.route('/').get((req, res) => {
   Account.find()
-    .then(accounts => res.json(accounts))
+    .then(acc => res.json(acc))
     .catch(err => res.status(400).json('Error: Did not find anything!' + err));
 });
 
@@ -45,7 +45,7 @@ router.route('/update/:id').post((req, res) => {
       acc.name = req.body.name;
       acc.user = req.body.user;
       acc.password = req.body.password;
-      acc.date = Date.parse(req.body.date);
+      acc.date = Date.parse(req.body.date); 
 
       acc.save()
         .then(() => res.json('Account updated!'))
