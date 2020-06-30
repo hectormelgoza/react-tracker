@@ -13,7 +13,7 @@ h3{
   text-align: center;
 }
 .account-item{
-  background-color: rgb(49, 179, 249);
+  background-color: rgb(141, 215, 255);
   text-align: center;
   width: 80%;
   margin: auto;
@@ -23,11 +23,16 @@ h3{
 }
 .btn-delete{
   border: none;
+  padding: .5rem;
   text-decoration: nones;
-  border-radius: 1rem;
+  border-radius: .2rem;
   background-color: rgb(221, 50, 38);
 }
 
-
-
+.account-name{
+  font-size: 2rem;
+}
+.pass{
+  margin-bottom: 2rem;
+}
 
