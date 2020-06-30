@@ -23,31 +23,17 @@ import Item from './Item'
   
     deleteAccount(id) {
       axios.delete('http://localhost:4000/api/'+id)
-        .then(response => { console.log(response.data)});
-  
-      this.setState({
-        accounts: this.state.accounts.filter(el => el !== id)
-      })
-      window.location = '/';
+        .then(() => this.setState({
+          accounts: this.state.accounts.filter(el => el !== id)
+        }) );
     }
-  
-  /*   accountList(){
-      const account = this.state.accounts
-     
-      
-      console.log(account)
-    }; */
-    
 
     render() {
-      
       console.log(this.state.accounts)
-      /* onst accountCards = {this.state.accounts}; */
       return (
         <div>
           <h3>Accounts</h3>
           <Item calls={this.state.accounts} delete={this.deleteAccount}/>
-          
         </div>
       )
     }
