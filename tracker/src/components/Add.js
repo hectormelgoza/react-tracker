@@ -58,9 +58,7 @@ export default class Add extends Component {
     console.log(account);
 
     axios.post('http://localhost:4000/api/add', account)
-    .then(() => {
-      console.log('Data has been sent to the server');
-    })
+    .then(res => res.json('account sent to database'))
     
     window.location = '/';
   }
@@ -77,6 +75,7 @@ export default class Add extends Component {
               type="text"
               required
               className="form-control"
+              placeholder="Account Name..."
               value={this.state.name}
               onChange={this.onChangeName}
           />
@@ -87,6 +86,7 @@ export default class Add extends Component {
               type="text"
               required
               className="form-control"
+              placeholder="User/Email..."
               value={this.state.user}
               onChange={this.onChangeUser}
               />
@@ -96,6 +96,7 @@ export default class Add extends Component {
           <input 
               type="text" 
               className="form-control"
+              placeholder="Password..."
               value={this.state.password}
               onChange={this.onChangePassword}
               />
