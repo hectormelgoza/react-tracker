@@ -35,4 +35,8 @@ h3{
 .pass{
   margin-bottom: 2rem;
 }
-
+.brand-img{
+  background-image: url(./images/cheese.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
