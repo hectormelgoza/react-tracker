@@ -26,7 +26,6 @@ const signup = require('./routes/signup.js');
 
 app.use('/api', routes);
 app.use('/login', login);
-app.use('/signup', signup);
 
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);
