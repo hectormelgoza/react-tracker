@@ -7,15 +7,11 @@ export default class Item extends Component {
 
 render() {
     return (
-        <div>
-            {this.props.calls.map(item => (
-            <ul className="account-item" key={item._id}> 
-                <div className="account-name">{item.name}</div>
-                <div>User: {item.user}</div>
-                <div className="pass" >Password: {item.password}</div>
-                <button className="btn-delete" onClick={this.handleDelete.bind(this, item._id)}>Delete</button>
-            </ul>
-            ))}
+        <div className="account-item">
+            <h3>{this.props.acc.name}</h3>
+            <h5>User: {this.props.acc.user}</h5>
+            <h5>Password: {this.props.acc.password}</h5>
+            <button className="btn-delete" onClick={() => {this.handleDelete(this.props.acc._id)}}>Delete</button>
         </div>
     )
 }
