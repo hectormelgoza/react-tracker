@@ -24,7 +24,7 @@ import Item from './Item'
     deleteAccount(id) {
       axios.delete('http://localhost:4000/api/'+id)
         .then(() => this.setState({
-          accounts: this.state.accounts.filter(el => el !== id)
+          accounts: [this.state.accounts.filter(el => el !== id)]
         }) );
     }
 
@@ -33,7 +33,10 @@ import Item from './Item'
       return (
         <div>
           <h3>Accounts</h3>
-          <Item calls={this.state.accounts} delete={this.deleteAccount}/>
+          {
+          this.state.accounts.map(item => {
+          return <Item acc={item} delete={this.deleteAccount} key={item._id} /> })
+          }
         </div>
       )
     }
