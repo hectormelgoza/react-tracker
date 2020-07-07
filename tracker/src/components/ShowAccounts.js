@@ -31,13 +31,13 @@ import Item from './Item'
     render() {
       console.log(this.state.accounts)
       return (
-        <div>
+        <>
           <h3>Accounts</h3>
-          {
+          <div>{
           this.state.accounts.map(item => {
-          return <Item acc={item} delete={this.deleteAccount} key={item._id} /> })
-          }
-        </div>
+          return <Item key={item._id} acc={item} delete={this.deleteAccount} /> })
+          }</div>
+        </>
       )
     }
   }
