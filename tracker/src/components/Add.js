@@ -14,9 +14,9 @@ export default class Add extends Component {
     this.onSubmit = this.onSubmit.bind(this);
 
     this.state = {
-      name: '',
-      user: '',
-      password: '',
+      name: [],
+      user: [],
+      password: [],
       date: new Date(),
     }
   }
