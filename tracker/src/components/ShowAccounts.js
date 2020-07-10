@@ -33,12 +33,8 @@ export default class ShowAccounts extends Component {
   render() {
     console.log(this.state.account)
     return (
-      <div>
-        {
-        this.state.account.map(item => (
-          <Item key={item._id} acc={item} delete={() => this.deleteAccount(item._id)} /> ))
-        }
-      </div>
+      this.state.account.map(item => (
+      <Item key={item._id} acc={item} delete={() => this.deleteAccount(item._id)} /> ))
     )
   }
 }
