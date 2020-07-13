@@ -23,11 +23,10 @@ export default class ShowAccounts extends Component {
 
   deleteAccount(id) {
     axios.delete('http://localhost:4000/api/'+id)
-    .then(() => console.log('account deleted from database'));
-    this.setState({
-      account: this.state.account.filter(el => el._id !== id)
-    })
+    .then(() => console.log('account deleted from database'))
     
+    const account = this.state.account.filter(el => el._id !== id)
+    this.setState({ account })
   }
 
   render() {
