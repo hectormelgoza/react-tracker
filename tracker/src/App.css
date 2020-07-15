@@ -24,9 +24,18 @@ h3{
 .btn-delete{
   border: none;
   padding: .5rem;
-  text-decoration: nones;
+  text-decoration: none;
   border-radius: .2rem;
   background-color: rgb(221, 50, 38);
+  margin-top: 2rem;
+  margin-right: 1rem;
+}
+.btn-update{
+  border: none;
+  padding: .5rem;
+  text-decoration: none;
+  border-radius: .2rem;
+  background-color: rgb(44, 212, 153);
   margin-top: 2rem;
 }
 .account-name{
