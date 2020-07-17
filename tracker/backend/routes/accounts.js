@@ -8,6 +8,12 @@ router.route('/').get((req, res) => {
     .catch(err => res.status(400).json('Error: Did not find anything!' + err));
 });
 
+router.route('/:id').get((req, res) => {
+  Account.findById(req.params.id)
+    .then(acc => res.json(acc))
+    .catch(err => res.status(400).json('Error: Did not find anything!' + err));
+});
+
 router.route('/add').post((req, res) => {
   const name = req.body.name;
   const user = req.body.user;
@@ -27,11 +33,7 @@ router.route('/add').post((req, res) => {
   .catch(err => res.status(400).json('Error: ' + err));
 });
 
-/*  router.route('/:id').get((req, res) => {
-  Exercise.findById(req.params.id)
-    .then(exercise => res.json(exercise))
-    .catch(err => res.status(400).json('Error: ' + err));
-}); */
+
 
 router.route('/:id').delete((req, res) => {
   Account.findByIdAndDelete(req.params.id)
@@ -39,7 +41,7 @@ router.route('/:id').delete((req, res) => {
     .catch(err => res.status(400).json('Error: ' + err));
 });
 
-router.route('/update/:id').post((req, res) => {
+router.route('/:id').post((req, res) => {
   Account.findById(req.params.id)
     .then(acc => {
       acc.name = req.body.name;
