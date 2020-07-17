@@ -20,7 +20,18 @@ export default class EditAccount extends Component {
       date: new Date(),
     }
   }
-
+  componentDidMount() {
+    axios.get('http://localhost:4000/api/'+this.props.match.params.id)
+      .then(res => {
+        this.setState({
+          name: res.data.name,
+          user: res.data.user,
+          password: res.data.password,
+          date: new Date(res.data.date)
+        })
+      })
+      console.log(this.state.name)
+  }
   onChangeName(e) {
     this.setState({
       name: e.target.value
@@ -57,7 +68,7 @@ export default class EditAccount extends Component {
 
     console.log(account);
 
-    axios.post('http://localhost:4000/api/add', account)
+    axios.post('http://localhost:4000/api/'+ this.state._id, account)
     .then(res => res.json('account sent to database'))
     
     window.location = '/';
@@ -67,7 +78,7 @@ export default class EditAccount extends Component {
     console.log("State: ", this.state)
     return (
     <div>
-      <h3>Submit form to add account!</h3>
+      <h3>Edit Account!</h3>
       <form onSubmit={this.onSubmit}>
         <div className="form-group"> 
           <label>Name: </label>
@@ -87,7 +98,7 @@ export default class EditAccount extends Component {
               required
               className="form-control"
               placeholder="User/Email..."
-              value={this.state.user}
+              value="{this.state.user}"
               onChange={this.onChangeUser}
               />
         </div>
