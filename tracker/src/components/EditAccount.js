@@ -17,11 +17,11 @@ export default class EditAccount extends Component {
       name: [],
       user: [],
       password: [],
-      date: new Date(),
+      date: new Date()
     }
   }
   componentDidMount() {
-    axios.get('http://localhost:4000/api/'+this.props.match.params.id)
+    axios.get('http://localhost:4000/api/' + this.props.match.params.id)
       .then(res => {
         this.setState({
           name: res.data.name,
@@ -69,13 +69,13 @@ export default class EditAccount extends Component {
     console.log(account);
 
     axios.post('http://localhost:4000/api/'+ this.state._id, account)
-    .then(res => res.json('account sent to database'))
+    .then(res => res.json('account updated!'))
     
     window.location = '/';
   }
 
   render() {
-    console.log("State: ", this.state)
+    console.log(this.state.name)
     return (
     <div>
       <h3>Edit Account!</h3>
@@ -98,7 +98,7 @@ export default class EditAccount extends Component {
               required
               className="form-control"
               placeholder="User/Email..."
-              value="{this.state.user}"
+              value={this.state.user}
               onChange={this.onChangeUser}
               />
         </div>
