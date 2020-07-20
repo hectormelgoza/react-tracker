@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-/* import { Link } from 'react-router-dom' */
+import { Link } from 'react-router-dom'
 import axios from 'axios'
 import Item from './Item'
 import EditAccount from './EditAccount';
@@ -38,12 +38,15 @@ export default class ShowAccounts extends Component {
   render() {
     console.log(this.state.account)
     return (
-      this.state.account.map(item => (
+      <div>
+        <h1>Live Accounts: {this.state.account.length}</h1>
+      {this.state.account.map(item => (
       <Item 
         key={item._id} 
         acc={item}
         update={() => this.handleUpdate(item._id)}
-        delete={() => this.deleteAccount(item._id)} /> ))
+        delete={() => this.deleteAccount(item._id)} /> ))}
+      </div>
     )
   }
 }
