@@ -4,7 +4,10 @@
   background-color: coral;
   text-align: center;
 }
-
+h1{
+  text-align: center;
+  margin: 2rem 0rem;
+}
 h4{
   font-size: 2rem;
 }
@@ -30,13 +33,23 @@ h3{
   margin-top: 2rem;
   margin-right: 1rem;
 }
+.btn-delete:hover{
+  transition: ease .36s;
+  color: aliceblue;
+  background-color: #e4544a;
+}
 .btn-update{
   border: none;
   padding: .5rem;
   text-decoration: none;
   border-radius: .2rem;
-  background-color: rgb(44, 212, 153);
+  background-color: rgb(45, 228, 164);
   margin-top: 2rem;
+}
+.btn-update:hover{
+  transition: ease .36s;
+  color: aliceblue;
+  background-color: rgb(84, 242, 186);
 }
 .account-name{
   font-size: 2rem;
@@ -48,4 +61,20 @@ h3{
   background-image: url(./images/cheese.svg);
   background-repeat: no-repeat;
   background-size: cover;
+}
+.add-button{
+  font-size: 4rem;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  background-color: rgb(2, 215, 2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15rem;
+  margin: auto;
+  border-radius: 4rem;
+  margin: auto;
+}
+.add-button:hover{
+  text-decoration: none;
 }
