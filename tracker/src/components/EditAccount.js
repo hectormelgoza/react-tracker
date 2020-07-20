@@ -68,7 +68,7 @@ export default class EditAccount extends Component {
 
     console.log(account);
 
-    axios.post('http://localhost:4000/api/'+ this.state._id, account)
+    axios.post('http://localhost:4000/api/'+ this.props.match.params.id, account)
     .then(res => res.json('account updated!'))
     
     window.location = '/';
