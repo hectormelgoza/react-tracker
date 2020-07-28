@@ -50,7 +50,7 @@ h5{
   width: 65%;
   margin: auto;
   margin-bottom: 2rem;
-  border-radius: 4rem;
+  border-radius: 1rem;
   box-shadow: 0px 0px 5px 3px rgb(193, 193, 193) ;
 }
 
@@ -89,4 +89,10 @@ h5{
   transition: ease .36s;
   color: aliceblue;
   background-color: rgb(84, 242, 186);
+}
+
+/* Search Filter */
+.search-filter{
+  margin-bottom: 2rem;
+
 }
