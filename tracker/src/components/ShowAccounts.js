@@ -2,15 +2,16 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import Item from './Item'
-import EditAccount from './EditAccount';
+
        
 export default class ShowAccounts extends Component {
   
   constructor(props) {
     super(props);
-    this.state = {account: []};
+    this.state = {account: [], search: []};
     this.deleteAccount = this.deleteAccount.bind(this);
     this.handleUpdate = this.handleUpdate.bind(this);
+    this.updateSearch = this.updateSearch.bind(this);
   }
   
   componentDidMount() {
@@ -35,17 +36,42 @@ export default class ShowAccounts extends Component {
     window.location = 'api/' + id;
   }
 
+  updateSearch(e){
+    this.setState({
+        search: e.target.value
+    })
+  }
+
   render() {
     console.log(this.state.account)
+    console.log(this.state.search)
+
+    let filteredAccounts = this.state.account.filter(
+      (account) => {
+        return account.name.toLowerCase().indexOf(this.state.search) !== -1;
+      }
+    );
     return (
       <div>
         <h1>Live Accounts: {this.state.account.length}</h1>
-      {this.state.account.map(item => (
-      <Item 
-        key={item._id} 
-        acc={item}
-        update={() => this.handleUpdate(item._id)}
-        delete={() => this.deleteAccount(item._id)} /> ))}
+        <div className="search-filter">
+            <input  
+              type="text"
+              className="form-control"
+              placeholder="Search..."
+              value={this.state.search}
+              onChange={this.updateSearch}
+          />
+        </div>
+        <div>{
+          filteredAccounts.map(item => (
+          <Item 
+            key={item._id} 
+            acc={item}
+            update={() => this.handleUpdate(item._id)}
+           delete={() => this.deleteAccount(item._id)} /> ))}
+        </div>
+        
       </div>
     )
   }
