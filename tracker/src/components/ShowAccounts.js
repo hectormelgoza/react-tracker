@@ -29,6 +29,7 @@ export default class ShowAccounts extends Component {
     .then(() => console.log('account deleted from database'))
     
     const account = this.state.account.filter(el => el._id !== id)
+    console.log(account)
     this.setState({ account })
   }
 
@@ -51,9 +52,11 @@ export default class ShowAccounts extends Component {
         return account.name.toLowerCase().indexOf(this.state.search) !== -1;
       }
     );
+
     return (
       <div>
         <h1>Live Accounts: {this.state.account.length}</h1>
+        
         <div className="search-filter">
             <input  
               type="text"
@@ -63,15 +66,15 @@ export default class ShowAccounts extends Component {
               onChange={this.updateSearch}
           />
         </div>
-        <div>{
-          filteredAccounts.map(item => (
+
+        <div>
+          {filteredAccounts.map(item => (
           <Item 
             key={item._id} 
             acc={item}
             update={() => this.handleUpdate(item._id)}
-           delete={() => this.deleteAccount(item._id)} /> ))}
+            delete={() => this.deleteAccount(item._id)} /> ))}
         </div>
-        
       </div>
     )
   }
