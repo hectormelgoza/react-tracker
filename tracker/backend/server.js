@@ -23,6 +23,7 @@ connection.once('open', () => {
 const routes = require('./routes/accounts.js');
 const login = require('./routes/user.js');
 
+
 app.use('/api', routes);
 app.use('/login', login);
 
