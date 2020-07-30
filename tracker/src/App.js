@@ -6,6 +6,7 @@ import Add from './components/Add'
 import Navbar from "./components/Navbar"
 import ShowAccounts from './components/ShowAccounts'
 import EditAccount from './components/EditAccount'
+import Register from './components/Register'
 
 import './App.css';
 
@@ -17,7 +18,7 @@ function App() {
       <Route path="/" exact component={ShowAccounts} />
       <Route path="/add" component={Add} />
       <Route path="/api/:id"  component={EditAccount} />
-      <Route path="/login" component={Add} />
+      <Route path="/register" component={Register} />
       </div>
     </Router>
   );

@@ -44,10 +44,6 @@ h5{
   justify-content: center;
 }
 
-/* Submit Button */
-.submit-btn{
-  background-color: purple;
-}
 /* Account Container */
 .account-item{
   background-image: linear-gradient(to bottom , blueviolet,rgb(153, 72, 228), rgb(197, 161, 230));

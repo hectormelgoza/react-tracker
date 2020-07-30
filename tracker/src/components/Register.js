@@ -4,7 +4,7 @@ import axios from 'axios'
 import Item from './Item'
 
        
-export default class ShowAccounts extends Component {
+export default class Login extends Component {
   
   constructor(props) {
     super(props);

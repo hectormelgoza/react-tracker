@@ -24,7 +24,6 @@
     "eject": "react-scripts eject",
     "backend": "npm run server --prefix backend",
     "dev": "concurrently \"npm start\" \"npm run backend\""
-
   },
   "eslintConfig": {
     "extends": "react-app"
