@@ -4,6 +4,61 @@
   background-color: coral;
   text-align: center;
 }
+/* Logo */
+img{
+  width: 100px;
+  margin: 2rem;
+}
+
+
+/* Login Page */
+.login-container{
+ text-align: center;
+}
+
+/* Login Labels */
+.label{
+  background-color: rgb(139, 178, 178);
+  display: flex;
+  width: 90%;
+  margin: auto;
+}
+
+/* Login Inputs */
+.inputs{
+  width: 90%;
+  padding: 5px;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 1rem;
+}
+/* Login Form */
+.login-form{
+  background-color: rgba(172, 172, 255, 0.471);
+  width: 50%;
+  margin: auto;
+  border-radius: 10px;
+  padding: 1rem 0rem;
+}
+
+/* Sign In Button */
+.sign-in-btn{
+background-color:  #28b463 ;
+color: white;
+border: none;
+border-radius: 2px;
+padding: .5rem 8rem;
+}
+
+/* New User link to Register */
+.new-user{
+  background-color: rgba(172, 172, 255, 0.471);
+  width: 50%;
+  margin: auto;
+  border-radius: 10px;
+  margin-top: 2rem;
+  padding: 1rem 0rem;
+}
 
 /* Live Accounts: */
 h1{
@@ -21,6 +76,7 @@ h3{
   justify-content: center;
   
 }
+
 
 /* Account User & Password */
 h5{
