@@ -1,25 +1,64 @@
-.main-container{
-  width: 90%;
-  margin: auto;
-  background-color: coral;
-  text-align: center;
-}
+
 /* Logo */
 img{
-  width: 100px;
-  margin: 2rem;
+  width: 50px;
+}
+h7{ 
+  background-color: rgb(129, 23, 156);
+  color: rgb(255, 255, 255);
+  display: block;
+  text-align: center;
+  font-size: 3rem;
+  font-family: 'Teko', sans-serif;
+}
+.message-brd{
+  text-align: left;
+  width: 80%;
+  margin: auto;
+  margin-top: 10rem;
+}
+.landing-container{
+  width: 100%;
+  height: 100vh;
 }
 
+.landing-login-btn{
+  margin-left: 400px;
+  background-color: hotpink;
+}
+.get-started-btn{
+  font-size: 28px;
+  color: white;
+  background-color: rgb(117, 183, 50);
+  padding: 1rem 0rem;
+  text-decoration: none;
+  display: block;
+  border-radius: 10px;
+  text-align: center;
+  width: 18rem;
+  
+  margin-top: 1.5rem;
+}
 
+.get-started-btn:hover{
+  text-decoration: none;
+  color: white;
+  background-color: rgb(83, 135, 30);
+}
+h6{
+  color: rgb(232, 232, 232);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
 /* Login Page */
 .login-container{
  text-align: center;
+ margin-top: 4rem;
 }
 
 /* Login Labels */
 .label{
-  background-color: rgb(139, 178, 178);
-  display: flex;
+  text-align: left;
   width: 90%;
   margin: auto;
 }
@@ -46,10 +85,16 @@ img{
 background-color:  #28b463 ;
 color: white;
 border: none;
-border-radius: 2px;
-padding: .5rem 8rem;
+border-radius: 10px;
+width: 90%;
+padding: .5rem 0rem;
 }
 
+
+.sign-in-btn:hover{
+  background-color: #009e42;
+  transition: ease .3s;
+}
 /* New User link to Register */
 .new-user{
   background-color: rgba(172, 172, 255, 0.471);
@@ -58,6 +103,11 @@ padding: .5rem 8rem;
   border-radius: 10px;
   margin-top: 2rem;
   padding: 1rem 0rem;
+}
+h4{
+  margin: 0px;
+  padding: 1rem 0rem;
+  font-size: 1.5rem;
 }
 
 /* Live Accounts: */
