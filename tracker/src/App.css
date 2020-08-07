@@ -4,21 +4,25 @@ img{
   width: 50px;
 }
 h7{ 
-  background-color: rgb(129, 23, 156);
+  width: 80%;
+  margin: auto;
   color: rgb(255, 255, 255);
   display: block;
-  text-align: center;
+  text-align: left;
   font-size: 3rem;
+  padding-top: 1.25rem;
   font-family: 'Teko', sans-serif;
 }
 .message-brd{
   text-align: left;
   width: 80%;
   margin: auto;
-  margin-top: 10rem;
+  margin-top: 9rem;
 }
 .landing-container{
-  width: 100%;
+  background-image: url(./images/pexels-andrea-piacquadio-3799115.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 100vh;
 }
 
@@ -105,11 +109,14 @@ padding: .5rem 0rem;
   padding: 1rem 0rem;
 }
 h4{
+  color: white;
   margin: 0px;
   padding: 1rem 0rem;
   font-size: 1.5rem;
 }
-
+h8{
+  color: white;
+}
 /* Live Accounts: */
 h1{
   text-align: center;
