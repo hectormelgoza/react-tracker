@@ -55,16 +55,19 @@ h6{
   margin-bottom: 1rem;
 }
 /* Login Page */
-.login-container{
+.login-container , .register-container{
  text-align: center;
  margin-top: 4rem;
+
 }
 
 /* Login Labels */
 .label{
-  text-align: left;
   width: 90%;
   margin: auto;
+margin-bottom: 0px;
+  display: block;
+  text-align: left;
 }
 
 /* Login Inputs */
@@ -207,4 +210,23 @@ h5{
 /* Search Filter */
 .search-filter{
   margin-bottom: 2rem;
+}
+h8{
+  color: #00649e;
+}
+.red-text{
+  color: red;
+}
+.sign-up-btn{
+  background-color:  #28b463 ;
+color: white;
+border: none;
+border-radius: 10px;
+width: 90%;
+padding: .5rem 0rem;
+}
+.sign-up-btn:hover{
+  cursor: pointer;
+  background-color: #009e42;
+  transition: ease .3s;
 }
