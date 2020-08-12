@@ -6,10 +6,10 @@ img{
 h7{ 
   width: 80%;
   margin: auto;
-  color: rgb(255, 255, 255);
+  color: white;
   display: block;
   text-align: left;
-  font-size: 3rem;
+  font-size: 4rem;
   padding-top: 1.25rem;
   font-family: 'Teko', sans-serif;
 }
@@ -40,13 +40,14 @@ h7{
   border-radius: 10px;
   text-align: center;
   width: 18rem;
-  
   margin-top: 1.5rem;
+  border: 2px solid green;
 }
 
 .get-started-btn:hover{
   text-decoration: none;
   color: white;
+  border: 2px solid white;
   background-color: rgb(83, 135, 30);
 }
 h6{
@@ -58,16 +59,16 @@ h6{
 .login-container , .register-container{
  text-align: center;
  margin-top: 4rem;
-
 }
 
 /* Login Labels */
 .label{
   width: 90%;
   margin: auto;
-margin-bottom: 0px;
+  margin-bottom: 0px;
   display: block;
   text-align: left;
+  font-size: 16px;
 }
 
 /* Login Inputs */
@@ -77,6 +78,12 @@ margin-bottom: 0px;
   border-radius: 10px;
   border: none;
   margin-bottom: 1rem;
+  font-size: 16px;
+  letter-spacing: .1rem;
+}
+.inputs:focus{
+  background-color: rgba(229, 201, 17, 0.779);
+  outline: none;
 }
 /* Login Form */
 .login-form{
@@ -93,10 +100,22 @@ background-color:  #28b463 ;
 color: white;
 border: none;
 border-radius: 10px;
-width: 90%;
-padding: .5rem 0rem;
+width: 92%;
+padding: 1rem 0rem;
+font-size: 16px;
 }
-
+.home-login-btn{
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  border: 2px solid white;
+  position: absolute;
+  right: 4rem;
+  top: 1.5rem;
+  background-color: darkgrey;
+}
 
 .sign-in-btn:hover{
   background-color: #009e42;
@@ -110,16 +129,15 @@ padding: .5rem 0rem;
   border-radius: 10px;
   margin-top: 2rem;
   padding: 1rem 0rem;
+  font-size: 16px;
 }
 h4{
-  color: white;
+  color: rgb(111, 19, 209);
   margin: 0px;
   padding: 1rem 0rem;
   font-size: 1.5rem;
 }
-h8{
-  color: white;
-}
+
 /* Live Accounts: */
 h1{
   text-align: center;
@@ -219,11 +237,12 @@ h8{
 }
 .sign-up-btn{
   background-color:  #28b463 ;
-color: white;
-border: none;
-border-radius: 10px;
-width: 90%;
-padding: .5rem 0rem;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  width: 92%;
+  padding: 1rem 0rem;
+  font-size: 16px;
 }
 .sign-up-btn:hover{
   cursor: pointer;
