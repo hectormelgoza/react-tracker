@@ -234,6 +234,8 @@ h8{
 }
 .red-text{
   color: red;
+  font-size: 16px;
+  margin-left: 1rem;
 }
 .sign-up-btn{
   background-color:  #28b463 ;
@@ -248,4 +250,49 @@ h8{
   cursor: pointer;
   background-color: #009e42;
   transition: ease .3s;
+}
+.logout-btn{
+  border: solid 2px red;
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  font-size: 16px;
+  color: red;
+  background-color:white;
+  cursor: pointer;
+  width: 200px;
+  margin-left: 12rem;
+  transition: ease-in-out .3s;
+}
+.logout-btn:hover{
+  background-color: red;
+  color: white;
+}
+.nav-add-btn{
+  text-decoration: none;
+  border: solid 2px green;
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  font-size: 16px;
+  width: 132px;
+  color: green;
+  background-color:white;
+  cursor: pointer;
+  margin-right: 12rem;
+  transition: ease-in-out .3s;
+}
+.nav-add-btn:hover{
+  background-color: green;
+  color: white;
+}
+
+.fixed-div{
+  text-align: center;
+  background-color: white;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  
+  bottom: 0px;
+  padding: 2rem 0rem;
 }
