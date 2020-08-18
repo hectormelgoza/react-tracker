@@ -136,6 +136,7 @@ h4{
   margin: 0px;
   padding: 1rem 0rem;
   font-size: 1.5rem;
+  text-align: center;
 }
 
 /* Live Accounts: */
@@ -284,7 +285,6 @@ h8{
   background-color: green;
   color: white;
 }
-
 .fixed-div{
   text-align: center;
   background-color: white;
@@ -292,7 +292,12 @@ h8{
   display: flex;
   justify-content: space-between;
   width: 100%;
-  
   bottom: 0px;
   padding: 2rem 0rem;
+}
+.search-filter{
+  width: 30rem;
+  margin: auto;
+  height: 2rem;
+  font-size: 16px;
 }
