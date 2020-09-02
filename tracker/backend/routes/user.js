@@ -66,10 +66,10 @@ router.route('/add').post((req, res) => {
     date
 };
 
-  User.findOne({_id: id}, (err,tank) => {
+  User.findOne({_id: id}, (err, user) => {
     if (err) return console.log(err);
-    tank.accounts = newAccount;
-    tank.save( (err) => {
+    user.accounts.push(newAccount);
+    user.save( (err) => {
       if (err) return console.log(err)
     })
   })
