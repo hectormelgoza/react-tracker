@@ -11,6 +11,8 @@ const validateLoginInput = require("../validation/login");
 
 // Load User model
 const User = require('../models/user.model');
+const Account = require('../models/account.model');
+
 
 // @route POST api/users/register
 // @desc Register user
@@ -23,7 +25,7 @@ router.post("/register", (req, res) => {
   if (!isValid) {
     return res.status(400).json(errors);
   }
-
+  console.log(req.body);
   User.findOne({ email: req.body.email }).then(user => {
     if (user) {
       return res.status(400).json({ msg: "Email already exists" });
@@ -50,7 +52,31 @@ router.post("/register", (req, res) => {
     }
   });
 });
+router.route('/add').post((req, res) => {
+  const id = req.body.id;
+  const name = req.body.name;
+  const user = req.body.user;
+  const password = req.body.password;
+  const date = Date.parse(req.body.date);
 
+  const newAccount = {
+    name,
+    user,
+    password,
+    date
+};
+
+  User.findOne({_id: id}, (err,tank) => {
+    if (err) return console.log(err);
+    tank.accounts = newAccount;
+    tank.save( (err) => {
+      if (err) return console.log(err)
+    })
+  })
+    
+  
+    
+});
 // @route POST api/users/login
 // @desc Login user and return JWT token
 // @access Public
@@ -94,7 +120,8 @@ router.post("/login", (req, res) => {
           (err, token) => {
             res.json({
               success: true,
-              token: "Bearer " + token
+              token: "Bearer " + token,
+              payload
             });
           }
         );
