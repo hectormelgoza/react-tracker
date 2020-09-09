@@ -17,6 +17,12 @@ const Account = require('../models/account.model');
 // @route POST api/users/register
 // @desc Register user
 // @access Public
+router.route('/:id').get((req, res) => {
+  User.findById({_id: req.params.id})
+    .then(acc => res.json(acc))
+    .catch(err => res.status(400).json('Error: Did not find anything!' + err));
+});
+
 router.post("/register", (req, res) => {
   // Form validation
   const { errors, isValid } = validateRegisterInput(req.body);
