@@ -2,9 +2,10 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
+import Navbar from '../Navbar'
 import Add from '../Add'
-
 import { Link } from "react-router-dom";
+import ShowAccounts from "../ShowAccounts";
 
 class Dashboard extends Component {
   onLogoutClick = e => {
@@ -14,15 +15,16 @@ class Dashboard extends Component {
 
   render() {
     const { user } = this.props.auth;
-
+    console.log(user)
     return (
       <div  className="dash-container">
         <div className="row">
           <div className="">
-            <h4>
+            <p>
               <b>Hey there,</b> {user.name.split(" ")[0]}
-            </h4>
-
+            </p>
+            <Navbar />
+            <ShowAccounts user={user}/>
             <div className="fixed-div">
             <button
               onClick={this.onLogoutClick}
@@ -31,6 +33,7 @@ class Dashboard extends Component {
               Logout
             </button>
             <Link to="/add" className="nav-add-btn">Add</Link>
+            
             </div>
           </div>
         </div>
