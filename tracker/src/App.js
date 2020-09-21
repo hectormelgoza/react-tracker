@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import "bootstrap/dist/css/bootstrap.min.css";
+/* import "bootstrap/dist/css/bootstrap.min.css"; */
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import jwt_decode from "jwt-decode";
@@ -55,6 +55,7 @@ class App extends Component{
           <Route path="/login" exact component={Login} />
           <Switch>
               <PrivateRoute exact path="/dashboard" component={Dashboard} />
+              <Route exact path="/add" component={Add} />
           </Switch>
           {/* <Route path="/api/:id"  component={EditAccount} /> */}
           {/* <Route path="/register" component={Register} /> */}
