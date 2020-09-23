@@ -28,7 +28,7 @@ h7{
 
 .landing-login-btn{
   margin-left: 400px;
-  background-color: hotpink;
+
 }
 .get-started-btn{
   font-size: 28px;
@@ -63,9 +63,7 @@ h6{
 
 /* Login Labels */
 .label{
-  width: 90%;
-  margin: auto;
-  margin-bottom: 0px;
+  padding-left: 5%;
   display: block;
   text-align: left;
   font-size: 16px;
@@ -82,7 +80,7 @@ h6{
   letter-spacing: .1rem;
 }
 .inputs:focus{
-  background-color: rgba(229, 201, 17, 0.779);
+  background-color: rgba(245, 224, 85, 0.779);
   outline: none;
 }
 /* Login Form */
@@ -100,9 +98,9 @@ background-color:  #28b463 ;
 color: white;
 border: none;
 border-radius: 10px;
-width: 92%;
+width: 90%;
 padding: 1rem 0rem;
-font-size: 16px;
+font-size: 18px;
 }
 .home-login-btn{
   color: white;
@@ -132,11 +130,11 @@ font-size: 16px;
   font-size: 16px;
 }
 h4{
-  color: rgb(111, 19, 209);
+  color: white;
   margin: 0px;
   padding: 1rem 0rem;
   font-size: 1.5rem;
-  text-align: center;
+  text-align: left;
 }
 
 /* Live Accounts: */
@@ -155,7 +153,6 @@ h3{
   justify-content: center;
   
 }
-
 
 /* Account User & Password */
 h5{
@@ -185,7 +182,7 @@ h5{
   width: 65%;
   margin: auto;
   margin-bottom: 2rem;
-  border-radius: 1rem;
+  border-radius: 1rem 1rem 0rem 0rem;
   box-shadow: 0px 0px 5px 3px rgb(193, 193, 193) ;
 }
 
@@ -300,4 +297,12 @@ h8{
   margin: auto;
   height: 2rem;
   font-size: 16px;
+}
+.checklist{
+  margin-bottom: 10rem;
+}
+.add-form{
+  width: 80%;
+  margin: auto;
+
 }
