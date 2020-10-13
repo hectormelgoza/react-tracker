@@ -21,7 +21,6 @@ class Login extends Component {
     if (this.props.auth.isAuthenticated) {
       this.props.history.push("/dashboard");
     }
-    console.log('fdsf');
   }
 
   componentWillReceiveProps(nextProps) {
@@ -47,7 +46,7 @@ class Login extends Component {
       email: this.state.email,
       password: this.state.password
     };
-
+    console.log('submitted');
     this.props.loginUser(userData);
   };
 
@@ -56,62 +55,52 @@ class Login extends Component {
     
     return (
       <div className="login-container">
-        <div>
-          <div className="">
-            <Link to="/" className="">
-              <img src={Logo}/>
-            </Link>
-            <div>
-              <h4>Sign in to PurpleTabs</h4>
-            </div>
-            <form noValidate onSubmit={this.onSubmit} className="login-form form-group">
-              <div className="">
-              <label className="label" htmlFor="email">Email</label><br></br>
-                <input className="inputs"
-                  onChange={this.onChange}
-                  value={this.state.email}
-                  error={errors.email}
-                  id="email"
-                  type="email"
-                  /* className={classnames("", {
-                    invalid: errors.email || errors.emailnotfound
-                  })} */
-                />
-                
-                <span className="red-text">
-                  {errors.email}
-                  {errors.emailnotfound}
-                </span>
-              </div>
-              <div className="">
-              <label className="label" htmlFor="password">Password</label><br></br>
-                <input className="inputs"
-                  onChange={this.onChange}
-                  value={this.state.password}
-                  error={errors.password}
-                  id="password"
-                  type="password"
-                  /* className={classnames("", {
-                    invalid: errors.password || errors.passwordincorrect
-                  })} */
-                />
-                
-                <span className="red-text">
-                  {errors.password}
-                  {errors.passwordincorrect}
-                </span>
-              </div>
-              <div className="" >
-                <button className="sign-in-btn" type="submit">
-                  Sign In
-                </button>
-              </div>
-            </form>
+        <Link to="/" className="sign-in-logo">
+          <img src={Logo}/>
+        </Link>
 
-            <div className="new-user">
-              New to PurpleTabs? <Link to="/register">Register now</Link>
-            </div>
+        <div className="sign-in-msg">
+          <h4>Sign in to PurpleTabs</h4>
+        </div>
+
+        <form noValidate onSubmit={this.onSubmit} className="login-form">
+          <label className="label" htmlFor="email">Email</label>
+          <input className="inputs"
+            onChange={this.onChange}
+            value={this.state.email}
+            error={errors.email}
+            id="email"
+            type="email"
+          />
+                
+          <span className="red-text">
+            {errors.email}
+            {errors.emailnotfound}
+          </span>
+              
+          <label className="label" htmlFor="password">Password</label>
+          <input className="inputs"
+            onChange={this.onChange}
+            value={this.state.password}
+            error={errors.password}
+            id="password"
+            type="password"
+          />
+                
+          <span className="red-text">
+            {errors.password}
+            {errors.passwordincorrect}
+          </span>
+              
+          <div className="sign-in-btn-container" >
+            <button className="sign-in-btn" type="submit">
+              Sign In
+            </button>
           </div>
+        </form>
+
+        <div className="new-user">
+          New to PurpleTabs? <Link to="/register">Register now</Link>
         </div>
       </div>
     );
