@@ -10,14 +10,15 @@ h7{
   display: block;
   text-align: left;
   font-size: 4rem;
-  padding-top: 1.25rem;
+  padding: 1rem 0rem;
+  
   font-family: 'Teko', sans-serif;
 }
 .message-brd{
   text-align: left;
   width: 80%;
   margin: auto;
-  margin-top: 9rem;
+  margin-top: 4rem;
 }
 .landing-container{
   background-image: url(./images/pexels-andrea-piacquadio-3799115.jpg);
@@ -40,8 +41,8 @@ h7{
   border-radius: 10px;
   text-align: center;
   width: 18rem;
-  margin-top: 1.5rem;
-  border: 2px solid green;
+  margin-top: 4rem;
+ 
 }
 
 .get-started-btn:hover{
@@ -56,15 +57,21 @@ h6{
   margin-bottom: 1rem;
 }
 /* Login Page */
-.login-container , .register-container{
- text-align: center;
- margin-top: 4rem;
+.login-container{
+  text-align: center;
+  margin-top: 4rem;
 }
-
+.register-container{
+  text-align: center;
+  margin-top: 2rem;
+}
+.sign-up-msg{
+  margin-bottom: 1rem;
+}
 /* Login Labels */
 .label{
-  padding-left: 5%;
-  display: block;
+  margin: 1rem;
+  margin-left: 5.5%;
   text-align: left;
   font-size: 16px;
 }
@@ -72,10 +79,10 @@ h6{
 /* Login Inputs */
 .inputs{
   width: 90%;
-  padding: 5px;
+  margin: auto;
+  
   border-radius: 10px;
   border: none;
-  margin-bottom: 1rem;
   font-size: 16px;
   letter-spacing: .1rem;
 }
@@ -88,8 +95,10 @@ h6{
   background-color: rgba(172, 172, 255, 0.471);
   width: 50%;
   margin: auto;
+  display:flex;
+  flex-direction: column;
   border-radius: 10px;
-  padding: 1rem 0rem;
+  padding: 0rem 0rem;
 }
 
 /* Sign In Button */
@@ -98,32 +107,36 @@ background-color:  #28b463 ;
 color: white;
 border: none;
 border-radius: 10px;
-width: 90%;
 padding: 1rem 0rem;
+width: 90%;
+margin: auto;
+margin: 1.5rem 0rem;
 font-size: 18px;
 }
 .home-login-btn{
   color: white;
   text-decoration: none;
   font-size: 24px;
-  padding: 1rem 2rem;
+  padding: 1rem 3rem;
   border-radius: 10px;
-  border: 2px solid white;
   position: absolute;
   right: 4rem;
-  top: 1.5rem;
+  top: 2rem;
   background-color: darkgrey;
 }
 
 .sign-in-btn:hover{
   background-color: #009e42;
+  cursor: pointer;
   transition: ease .3s;
 }
+
 /* New User link to Register */
 .new-user{
   background-color: rgba(172, 172, 255, 0.471);
   width: 50%;
   margin: auto;
+  text-align: center;
   border-radius: 10px;
   margin-top: 2rem;
   padding: 1rem 0rem;
@@ -136,7 +149,14 @@ h4{
   font-size: 1.5rem;
   text-align: left;
 }
-
+.sign-in-msg > h4{
+  color: indigo;
+  text-align: center;
+}
+.sign-up-msg > h4{
+  color: indigo;
+  text-align: center;
+}
 /* Live Accounts: */
 h1{
   text-align: center;
@@ -240,8 +260,11 @@ h8{
   color: white;
   border: none;
   border-radius: 10px;
-  width: 92%;
+  width: 90%;
+  margin: auto;
   padding: 1rem 0rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
   font-size: 16px;
 }
 .sign-up-btn:hover{
@@ -258,7 +281,6 @@ h8{
   background-color:white;
   cursor: pointer;
   width: 200px;
-  margin-left: 12rem;
   transition: ease-in-out .3s;
 }
 .logout-btn:hover{
@@ -275,7 +297,7 @@ h8{
   color: green;
   background-color:white;
   cursor: pointer;
-  margin-right: 12rem;
+  
   transition: ease-in-out .3s;
 }
 .nav-add-btn:hover{
@@ -284,10 +306,9 @@ h8{
 }
 .fixed-div{
   text-align: center;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.851);
   position: fixed;
-  display: flex;
-  justify-content: space-between;
+  
   width: 100%;
   bottom: 0px;
   padding: 2rem 0rem;
@@ -301,8 +322,64 @@ h8{
 .checklist{
   margin-bottom: 10rem;
 }
-.add-form{
-  width: 80%;
-  margin: auto;
 
+@media screen and (max-width: 800px) {
+  .landing-container {
+    background-image: none;
+    background-color: lightgreen;
+  }
+  .message-brd > h4{
+    background-color: indigo;
+    width: 100%;
+    text-align: center;
+    margin: auto; 
+    margin-top: 3.5rem; 
+  
+  }
+  .get-started-btn{
+    font-size: 28px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(59, 213, 105); 
+    text-decoration: none;
+    border-radius: 10px;
+    width: 18rem;
+    margin: auto; 
+    margin-top: 5rem;
+  }
+  .home-login-btn{
+    display: none;
+    
+  }
+  h7{
+    text-align: center;
+  }
+  
+  .login-form{
+    min-width: 85%;
+  }
+  .new-user{
+    min-width: 85%;
+  }
+  .search-filter{
+    background-color: rgb(255, 249, 197);
+    width: 89%;
+    
+    display: flex;
+    justify-content: center;
+    
+  }
+  .fixed-div{
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .account-item{
+    width: 90%;
+  }
+  .navbar{
+    display: none;
+  }
+  .greeting-msg{
+    text-align: center;
+    font-size: 1.4rem;
+  }
 }
