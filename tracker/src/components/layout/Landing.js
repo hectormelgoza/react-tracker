@@ -11,16 +11,16 @@ class Landing extends Component {
         <h7>PurpleTabs</h7>
         <Link className="home-login-btn" to="/login">Log in</Link>
         </div>
-        <div>
-          <div className="">
+        
+          
             <div className="message-brd">
             <h4>NEVER FORGET ANOTHER PASSWORD</h4>
             <h4>GENERATE ACCOUNTS AND SAVE PASSWORDS</h4>
             
               <Link className="get-started-btn" to="/register">Get Started!</Link>
             </div>
-          </div>
-        </div>
+          
+        
         <div className="btt">
 
         </div>
