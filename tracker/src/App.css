@@ -383,3 +383,31 @@ h8{
     font-size: 1.4rem;
   }
 }
+@media screen and (min-width: 800px){
+  .fixed-div{
+    
+    width: 48rem;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .dash-container{
+    width: 48rem;
+    margin: auto;
+  }
+  .search-filter{
+    display: flex;
+    justify-content: center;
+  }
+  .login-container{
+    width: 50rem;
+    margin: auto;
+    margin-top: 4rem;
+  }
+  .login-form, .new-user{
+    width: 35rem;
+  }
+  .message-brd{
+    margin-top: 8rem;
+  }
+}
