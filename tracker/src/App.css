@@ -73,22 +73,23 @@ h6{
   margin: 1rem;
   margin-left: 5.5%;
   text-align: left;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 /* Login Inputs */
 .inputs{
-  width: 90%;
+  width: 86%;
   margin: auto;
-  
   border-radius: 10px;
   border: none;
-  font-size: 16px;
+  font-size: 18px;
+  padding: 5px 10px;
   letter-spacing: .1rem;
+  transition:.4s ease-in-out;
 }
 .inputs:focus{
-  background-color: rgba(245, 224, 85, 0.779);
   outline: none;
+  background-color: rgba(228, 192, 100, 0.783);
 }
 /* Login Form */
 .login-form{
