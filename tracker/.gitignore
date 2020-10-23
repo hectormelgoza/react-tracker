@@ -5,6 +5,9 @@
 /.pnp
 .pnp.js
 
+#config
+/backend/config
+
 # Dependency directories
 node_modules/
 jspm_packages/

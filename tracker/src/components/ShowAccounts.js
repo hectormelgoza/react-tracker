@@ -19,7 +19,7 @@ class ShowAccounts extends Component {
   
   componentDidMount() {
     this.setState({id: this.props.auth.user.id})
-    axios.get('http://localhost:4000/api/users/' + this.props.auth.user.id)
+    axios.get('/api/users/' + this.props.auth.user.id)
       .then(res => this.setState({
         account: res.data.accounts
       }))
@@ -29,7 +29,7 @@ class ShowAccounts extends Component {
   }
 
   deleteAccount(id) {
-    axios.delete('http://localhost:4000/api/'+id)
+    axios.delete('api/users/delete'+id)
     .then(() => console.log('account deleted from database'))
     .catch((err)=> console.log(err))
     const account = this.state.account.filter(el => el._id !== id)
@@ -47,9 +47,6 @@ class ShowAccounts extends Component {
   }
 
   render() {
-    console.log(this.state.id)
-    console.log(this.state.account)
-    console.log(this.state.search)
 
     let filteredAccounts = this.state.account.filter(
       (account) => {
@@ -59,10 +56,10 @@ class ShowAccounts extends Component {
 
     return (
       <div>
-        
+    
         <h1>Live Accounts: {this.state.account.length}</h1>
         
-        <div className="search-filter">
+      
             <input  
               type="text"
               className="search-filter"
@@ -70,9 +67,9 @@ class ShowAccounts extends Component {
               value={this.state.search}
               onChange={this.updateSearch}
           />
-        </div>
+        
 
-        {<div>
+        {<div className="checklist"> 
           {filteredAccounts.map(item => (
           <Item 
             key={item._id} 

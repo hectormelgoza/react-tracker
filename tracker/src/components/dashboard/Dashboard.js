@@ -18,14 +18,16 @@ class Dashboard extends Component {
     console.log(user)
     return (
       <div  className="dash-container">
-        <div className="row">
-          <div className="">
-            <p>
-              <b>Hey there,</b> {user.name.split(" ")[0]}
-            </p>
-            <Navbar />
-            <ShowAccounts user={user}/>
-            <div className="fixed-div">
+        
+          <p className="greeting-msg">
+            Hey there, <b>{user.name.split(" ")[0]}</b>
+          </p>
+
+          <Navbar />
+
+          <ShowAccounts user={user}/>
+
+          <div className="fixed-div">
             <button
               onClick={this.onLogoutClick}
               className="logout-btn"
@@ -33,10 +35,8 @@ class Dashboard extends Component {
               Logout
             </button>
             <Link to="/add" className="nav-add-btn">Add</Link>
-            
-            </div>
           </div>
-        </div>
+        
       </div>
     );
   }

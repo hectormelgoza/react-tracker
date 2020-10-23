@@ -1,8 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-/* const Account = require('../models/account.model'); */
-
 const accountSchema = new Schema({
   name: { type: String, required: true },
   user: { type: String, required: true },

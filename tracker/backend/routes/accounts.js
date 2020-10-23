@@ -35,7 +35,7 @@ router.route('/add').post((req, res) => {
 
 
 
-router.route('/:id').delete((req, res) => {
+router.route('/delete/:id').delete((req, res) => {
   Account.findByIdAndDelete(req.params.id)
     .then(() => res.json('Account deleted!!'))
     .catch(err => res.status(400).json('Error: ' + err));

@@ -5,8 +5,8 @@ export default class Navbar extends Component {
 
   render() {
     return (
-      <nav className="navbar navbar-dark bg-dark navbar-expand-lg">
-        <Link to="/" /* className="brand-img" */> <img alt="Logo" src="../images/cheese.svg" width="200px" height="200px"/> </Link>
+      <nav className="navbar">
+        <Link to="/" /* className="brand-img" */> </Link>
         <div className="collpase navbar-collapse">
         <ul className="navbar-nav mr-auto">
           <li className="navbar-item">

@@ -3,6 +3,7 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const morgan = require('morgan');
 const passport = require("passport");
+const path = require('path');
 
 require('dotenv').config();
 
@@ -19,6 +20,7 @@ app.use(cors());
 app.use(morgan('tiny'));
 app.use(express.json());
 
+
 const db = require("./config/keys").mongoURI;
 
 mongoose.connect(db, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true }
@@ -28,12 +30,15 @@ connection.once('open', () => {
   console.log("MongoDB CONNECTED");
 })
 
-const routes = require('./routes/accounts.js');
 const users = require('./routes/user.js');
 
-
-app.use('/api', routes);
 app.use('/api/users', users);
+
+app.use(express.static(path.join(__dirname, 'tracker/build')));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname+'/tracker/build/index.html'));
+});
 
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);

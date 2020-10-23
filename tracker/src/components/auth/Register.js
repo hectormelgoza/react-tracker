@@ -60,7 +60,7 @@ class Register extends Component {
           <h4>Join today for free</h4>
         </div>
 
-        <form noValidate onSubmit={this.onSubmit} className="login-form form-group">
+        <form noValidate onSubmit={this.onSubmit} className="login-form">
           <label className="label" htmlFor="name">Name<span className="red-text">{errors.name}</span></label><br></br>
           <input
             onChange={this.onChange}

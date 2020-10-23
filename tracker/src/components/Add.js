@@ -1,9 +1,17 @@
 import React, { Component } from 'react';
 import DatePicker from 'react-datepicker';
-import "react-datepicker/dist/react-datepicker.css";
+/* import "react-datepicker/dist/react-datepicker.css"; */
 import axios from 'axios';
+/* import "bootstrap/dist/css/bootstrap.min.css"; */
 
-export default class Add extends Component {
+
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { logoutUser } from "../actions/authActions";
+
+
+
+class Add extends Component {
   constructor(props) {
     super(props);
 
@@ -14,11 +22,23 @@ export default class Add extends Component {
     this.onSubmit = this.onSubmit.bind(this);
 
     this.state = {
+      id:[],
       name: [],
       user: [],
       password: [],
-      date: new Date(),
+      date: new Date()
     }
+  }
+
+  componentDidMount() {
+    /* axios.get('http://localhost:4000/api/users')
+      .then(res => {
+      this.setState({id: res.data.id})
+      })
+      .catch((error) => {
+        console.log(error);
+      }) */
+      this.setState({id: this.props.auth.user.id})
   }
 
   onChangeName(e) {
@@ -49,6 +69,7 @@ export default class Add extends Component {
     e.preventDefault();
 
     const account = {
+      id: this.state.id,
       name: this.state.name,
       user: this.state.user,
       password: this.state.password,
@@ -57,10 +78,11 @@ export default class Add extends Component {
 
     console.log(account);
 
-    axios.post('http://localhost:4000/api/add', account)
-    .then(res => res.json('account sent to database'))
+    axios.post("/api/users/add", account)
+    .then(() => console.log('something went wrong'))
+    .catch(err => console.log('error'));
     
-    window.location = '/';
+    window.location = '/dashboard';
   }
 
   render() {
@@ -68,8 +90,8 @@ export default class Add extends Component {
     return (
     <div>
       <h3>Submit form to add account!</h3>
-      <form onSubmit={this.onSubmit}>
-        <div className="form-group"> 
+      <form onSubmit={this.onSubmit} className="add-form">
+        <div> 
           <label>Name: </label>
           <input  
               type="text"
@@ -119,3 +141,16 @@ export default class Add extends Component {
     )
   }
 }
+Add.propTypes = {
+  logoutUser: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired
+};
+
+const mapStateToProps = state => ({
+  auth: state.auth
+});
+
+export default connect(
+  mapStateToProps,
+  { logoutUser }
+)(Add);
