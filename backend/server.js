@@ -34,11 +34,8 @@ const users = require('./routes/user.js');
 
 app.use('/api/users', users);
 
-app.use(express.static(path.join(__dirname, 'tracker/build')));
+app.use(express.static(path.join(__dirname, '../build')));
 
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname+'/tracker/build/index.html'));
-});
 
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);
