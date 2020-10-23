@@ -1,0 +1,414 @@
+
+/* Logo */
+img{
+  width: 50px;
+}
+h7{ 
+  width: 80%;
+  margin: auto;
+  color: white;
+  display: block;
+  text-align: left;
+  font-size: 4rem;
+  padding: 1rem 0rem;
+  
+  font-family: 'Teko', sans-serif;
+}
+.message-brd{
+  text-align: left;
+  width: 80%;
+  margin: auto;
+  margin-top: 4rem;
+}
+.landing-container{
+  background-image: url(./images/pexels-andrea-piacquadio-3799115.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.landing-login-btn{
+  margin-left: 400px;
+
+}
+.get-started-btn{
+  font-size: 28px;
+  color: white;
+  background-color: rgb(117, 183, 50);
+  padding: 1rem 0rem;
+  text-decoration: none;
+  display: block;
+  border-radius: 10px;
+  text-align: center;
+  width: 18rem;
+  margin-top: 4rem;
+ 
+}
+
+.get-started-btn:hover{
+  text-decoration: none;
+  color: white;
+  border: 2px solid white;
+  background-color: rgb(83, 135, 30);
+}
+h6{
+  color: rgb(232, 232, 232);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+/* Login Page */
+.login-container{
+  text-align: center;
+  margin-top: 4rem;
+}
+.register-container{
+  text-align: center;
+  margin-top: 2rem;
+}
+.sign-up-msg{
+  margin-bottom: 1rem;
+}
+/* Login Labels */
+.label{
+  margin: 1rem;
+  margin-left: 5.5%;
+  text-align: left;
+  font-size: 18px;
+}
+
+/* Login Inputs */
+.inputs{
+  width: 86%;
+  margin: auto;
+  border-radius: 10px;
+  border: none;
+  font-size: 18px;
+  padding: 5px 10px;
+  letter-spacing: .1rem;
+  transition:.4s ease-in-out;
+}
+.inputs:focus{
+  outline: none;
+  background-color: rgba(228, 192, 100, 0.783);
+}
+/* Login Form */
+.login-form{
+  background-color: rgba(172, 172, 255, 0.471);
+  width: 50%;
+  margin: auto;
+  display:flex;
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 0rem 0rem;
+}
+
+/* Sign In Button */
+.sign-in-btn{
+background-color:  #28b463 ;
+color: white;
+border: none;
+border-radius: 10px;
+padding: 1rem 0rem;
+width: 90%;
+margin: auto;
+margin: 1.5rem 0rem;
+font-size: 18px;
+}
+.home-login-btn{
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 1rem 3rem;
+  border-radius: 10px;
+  position: absolute;
+  right: 4rem;
+  top: 2rem;
+  background-color: darkgrey;
+}
+
+.sign-in-btn:hover{
+  background-color: #009e42;
+  cursor: pointer;
+  transition: ease .3s;
+}
+
+/* New User link to Register */
+.new-user{
+  background-color: rgba(172, 172, 255, 0.471);
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  border-radius: 10px;
+  margin-top: 2rem;
+  padding: 1rem 0rem;
+  font-size: 16px;
+}
+h4{
+  color: white;
+  margin: 0px;
+  padding: 1rem 0rem;
+  font-size: 1.5rem;
+  text-align: left;
+}
+.sign-in-msg > h4{
+  color: indigo;
+  text-align: center;
+}
+.sign-up-msg > h4{
+  color: indigo;
+  text-align: center;
+}
+/* Live Accounts: */
+h1{
+  text-align: center;
+  margin: 2rem 0rem;
+}
+
+/* Account Name */
+h3{
+  font-size: 2.5rem;
+  color: rgb(218, 172, 255);
+  text-align: center;
+  padding: 2rem 0rem 0rem 0rem;
+  display: flex;
+  justify-content: center;
+  
+}
+
+/* Account User & Password */
+h5{
+  margin: 0rem;
+  color: azure;
+  display: flex;
+  margin: 1rem 0rem 0rem 0rem;
+  justify-content: center;
+}
+
+/* User Input */
+.user-input{
+  letter-spacing: .2rem;
+  margin-left: 1rem;
+}
+
+/* Password Input */
+.password-input{
+  letter-spacing: .2rem;
+  margin-left: 1rem;
+  justify-content: center;
+}
+
+/* Account Container */
+.account-item{
+  background-image: linear-gradient(to bottom , blueviolet,rgb(153, 72, 228), rgb(197, 161, 230));
+  width: 65%;
+  margin: auto;
+  margin-bottom: 2rem;
+  border-radius: 1rem 1rem 0rem 0rem;
+  box-shadow: 0px 0px 5px 3px rgb(193, 193, 193) ;
+}
+
+/* Button Container */
+.btn-container{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  border-radius: 45px;
+}
+.btn-delete{
+  border: none;
+  padding: .5rem;
+  text-decoration: none;
+  border-radius: .2rem;
+  background-color: rgb(221, 50, 38);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-right: 1.5rem;
+}
+.btn-delete:hover{
+  transition: ease .36s;
+  color: aliceblue;
+  background-color: #e4544a;
+}
+.btn-update{
+  border: none;
+  padding: .5rem;
+  text-decoration: none;
+  border-radius: .2rem;
+  background-color: rgb(45, 228, 164);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.btn-update:hover{
+  transition: ease .36s;
+  color: aliceblue;
+  background-color: rgb(84, 242, 186);
+}
+
+/* Search Filter */
+.search-filter{
+  margin-bottom: 2rem;
+}
+h8{
+  color: #00649e;
+}
+.red-text{
+  color: red;
+  font-size: 16px;
+  margin-left: 1rem;
+}
+.sign-up-btn{
+  background-color:  #28b463 ;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  width: 90%;
+  margin: auto;
+  padding: 1rem 0rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 16px;
+}
+.sign-up-btn:hover{
+  cursor: pointer;
+  background-color: #009e42;
+  transition: ease .3s;
+}
+.logout-btn{
+  border: solid 2px red;
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  font-size: 16px;
+  color: red;
+  background-color:white;
+  cursor: pointer;
+  width: 200px;
+  transition: ease-in-out .3s;
+}
+.logout-btn:hover{
+  background-color: red;
+  color: white;
+}
+.nav-add-btn{
+  text-decoration: none;
+  border: solid 2px green;
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  font-size: 16px;
+  width: 132px;
+  color: green;
+  background-color:white;
+  cursor: pointer;
+  
+  transition: ease-in-out .3s;
+}
+.nav-add-btn:hover{
+  background-color: green;
+  color: white;
+}
+.fixed-div{
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.851);
+  position: fixed;
+  
+  width: 100%;
+  bottom: 0px;
+  padding: 2rem 0rem;
+}
+.search-filter{
+  width: 30rem;
+  margin: auto;
+  height: 2rem;
+  font-size: 16px;
+}
+.checklist{
+  margin-bottom: 10rem;
+}
+
+@media screen and (max-width: 800px) {
+  .landing-container {
+    background-image: none;
+    background-color: lightgreen;
+  }
+  .message-brd > h4{
+    background-color: indigo;
+    width: 100%;
+    text-align: center;
+    margin: auto; 
+    margin-top: 3.5rem; 
+  
+  }
+  .get-started-btn{
+    font-size: 28px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(59, 213, 105); 
+    text-decoration: none;
+    border-radius: 10px;
+    width: 18rem;
+    margin: auto; 
+    margin-top: 5rem;
+  }
+  .home-login-btn{
+    display: none;
+    
+  }
+  h7{
+    text-align: center;
+  }
+  
+  .login-form{
+    min-width: 85%;
+  }
+  .new-user{
+    min-width: 85%;
+  }
+  .search-filter{
+    background-color: rgb(255, 249, 197);
+    width: 89%;
+    
+    display: flex;
+    justify-content: center;
+    
+  }
+  .fixed-div{
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .account-item{
+    width: 90%;
+  }
+  .navbar{
+    display: none;
+  }
+  .greeting-msg{
+    text-align: center;
+    font-size: 1.4rem;
+  }
+}
+@media screen and (min-width: 800px){
+  .fixed-div{
+    
+    width: 48rem;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .dash-container{
+    width: 48rem;
+    margin: auto;
+  }
+  .search-filter{
+    display: flex;
+    justify-content: center;
+  }
+  .login-container{
+    width: 50rem;
+    margin: auto;
+    margin-top: 4rem;
+  }
+  .login-form, .new-user{
+    width: 35rem;
+  }
+  .message-brd{
+    margin-top: 8rem;
+  }
+}
