@@ -19,7 +19,7 @@ class ShowAccounts extends Component {
   
   componentDidMount() {
     this.setState({id: this.props.auth.user.id})
-    axios.get('/api/users/' + this.props.auth.user.id)
+    axios.get('/api/users' + this.props.auth.user.id)
       .then(res => this.setState({
         account: res.data.accounts
       }))

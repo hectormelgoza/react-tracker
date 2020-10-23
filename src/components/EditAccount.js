@@ -21,7 +21,7 @@ export default class EditAccount extends Component {
     }
   }
   componentDidMount() {
-    axios.get('http://localhost:4000/api/' + this.props.match.params.id)
+    axios.get('/api/' + this.props.match.params.id)
       .then(res => {
         this.setState({
           name: res.data.name,
@@ -68,7 +68,7 @@ export default class EditAccount extends Component {
 
     console.log(account);
 
-    axios.post('http://localhost:4000/api/'+ this.props.match.params.id, account)
+    axios.post('/api/'+ this.props.match.params.id, account)
     .then(res => res.json('account updated!'))
     
     window.location = '/';
