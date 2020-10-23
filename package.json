@@ -32,7 +32,7 @@
     "eject": "react-scripts eject",
     "backend": "npm run server --prefix backend",
     "dev": "concurrently \"npm start\" \"npm run backend\"",
-    "heroku-postbuild": "npm install && npm run build"
+    "heroku-postbuild": "npm install && npm run build && npm run dev"
   },
   "eslintConfig": {
     "extends": "react-app"
