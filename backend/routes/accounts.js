@@ -1,4 +1,4 @@
-const router = require('express').Router();
+/* const router = require('express').Router();
 
 let Account = require('../models/account.model');
 
@@ -56,4 +56,4 @@ router.route('/:id').post((req, res) => {
     .catch(err => res.status(400).json('Error: ' + err));
 });
 
-module.exports = router; 
+module.exports = router;  */
