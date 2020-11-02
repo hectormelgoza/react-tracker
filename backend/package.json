@@ -30,5 +30,5 @@
   "devDependencies": {
     "nodemon": "^2.0.4"
   },
-  "proxy": "https://git.heroku.com/purbletabs.git"
+  "proxy": "https://purbletabs.herokuapp.com"
 }
