@@ -78,7 +78,7 @@ class Add extends Component {
 
     console.log(account);
 
-    axios.post("/add", account)
+    axios.post("api/users/add", account)
     .then(() => console.log('something went wrong'))
     .catch(err => console.log('error'));
     

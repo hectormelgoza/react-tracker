@@ -12,7 +12,9 @@ render() {
             <button className="btn-delete" onClick={this.props.delete}>Delete</button>
             <button className="btn-update" onClick={this.props.update}>Update</button>
             </div>
+
         </div>
+
     )
 }
 }
