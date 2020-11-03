@@ -27,13 +27,13 @@
     "serve": "^11.3.2"
   },
   "scripts": {
-    "start": "node backend/server.js",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "backend": "npm run server --prefix backend",
     "dev": "concurrently \"npm start\" \"npm run backend\"",
-    "heroku-postbuild":"NPM_CONFIG_PRODUCTION=false npm install && npm run build"
+    "heroku-postbuild":"NPM_CONFIG_PRODUCTION=false npm install && npm run build && npm run dev"
   },
   "eslintConfig": {
     "extends": "react-app"
