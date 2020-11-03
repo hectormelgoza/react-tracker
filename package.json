@@ -11,6 +11,7 @@
     "bootstrap": "^4.5.0",
     "classnames": "^2.2.6",
     "concurrently": "^5.2.0",
+    "cors": "^2.8.5",
     "is-empty": "^1.2.0",
     "jwt-decode": "^2.2.0",
     "prop-types": "^15.7.2",
@@ -33,7 +34,7 @@
     "eject": "react-scripts eject",
     "backend": "npm run server --prefix backend",
     "dev": "concurrently \"npm start\" \"npm run backend\"",
-    "heroku-postbuild":"NPM_CONFIG_PRODUCTION=false npm install && npm run build && npm run dev"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install && npm run build && npm run dev"
   },
   "eslintConfig": {
     "extends": "react-app"
