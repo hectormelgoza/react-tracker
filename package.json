@@ -27,13 +27,13 @@
     "serve": "^11.3.2"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node backend/server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "backend": "npm run server --prefix backend",
     "dev": "concurrently \"npm start\" \"npm run backend\"",
-    "heroku-postbuild":"NPM_CONFIG_PRODUCTION=false npm install && npm run build"
+    "heroku-postbuild":"NPM_CONFIG_PRODUCTION=false npm install npm && run build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -50,5 +50,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:"
+  "proxy": "http://localhost:4000"
 }
