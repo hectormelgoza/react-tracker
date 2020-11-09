@@ -14,7 +14,7 @@ const port = process.env.PORT || 4000;
 app.use(passport.initialize());
 
 // Passport config
-require("./config/passport.js")(passport);
+require("./configs/passport.js")(passport);
 
 app.use(cors());
 app.use(morgan('tiny'));
