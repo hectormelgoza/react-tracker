@@ -56,6 +56,8 @@ router.post("/register", (req, res) => {
         });
       });
     }
+  }).catch((error) => {
+    console.log(error);
   });
 });
 router.route('/add').post((req, res) => {
@@ -72,13 +74,16 @@ router.route('/add').post((req, res) => {
     date
 };
 
-  User.findOne({_id: id}, (err, user) => {
-    if (err) return console.log(err);
+  User.findOne({_id: id}).then((user,err) => {
+    /* if (err) return console.log(err); */
     user.accounts.push(newAccount);
-    user.save( (err) => {
-      if (err) return console.log(err)
-    })
-  })
+    user
+      .save()
+      .then(user => res.json(user))
+      .catch(err => console.log(err));
+  }).catch((error) => {
+    console.log(error);
+  });
     
   
     
@@ -137,6 +142,8 @@ router.post("/login", (req, res) => {
           .json({ passwordincorrect: "Password incorrect" });
       }
     });
+  }).catch((error) => {
+    console.log(error);
   });
 });
 
