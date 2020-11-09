@@ -21,7 +21,7 @@ app.use(morgan('tiny'));
 app.use(express.json());
 
 
-const db = require("./config/keys").mongoURI;
+const db = require("./configs/keys").mongoURI;
 
 mongoose.connect(db, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true }
 );
