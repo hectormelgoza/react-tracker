@@ -34,13 +34,13 @@ const users = require('./routes/user.js');
 
 app.use('/api/users', users);
 
-if(process.env.NODE_ENV === 'production'){
-  app.use(express.static('../build'));
-  app.get('*', (req,res)=>{
-    res.sendFile(path.join(__dirname,'../build','index.html'))
-  })
 
-}
+app.use(express.static(path.join(__dirname, '../build')))
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../build'))
+})
+
+
 
 
 app.listen(port, () => {
