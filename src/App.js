@@ -9,9 +9,9 @@ import { Provider } from "react-redux";
 import store from "./store";
 
 import Add from './components/Add'
-import Navbar from "./components/Navbar"
+/* import Navbar from "./components/Navbar"
 import ShowAccounts from './components/ShowAccounts'
-import EditAccount from './components/EditAccount'
+import EditAccount from './components/EditAccount' */
 
 
 import Landing from "./components/layout/Landing";
@@ -21,7 +21,7 @@ import PrivateRoute from "./components/private-route/PrivateRoute";
 import Dashboard from "./components/dashboard/Dashboard";
 
 import './App.css';
-import { registerLocale } from 'react-datepicker';
+/* import { registerLocale } from 'react-datepicker'; */
 
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 /* import classnames from "classnames"; */
-import Logo from "../../images/pt.svg"
+/* import Logo from "../../images/pt.svg" */
 import { loginUser } from "../../actions/authActions";
 
 class Login extends Component {
