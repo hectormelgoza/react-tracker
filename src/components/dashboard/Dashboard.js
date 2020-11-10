@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
 import Navbar from '../Navbar'
-import Add from '../Add'
+/* import Add from '../Add' */
 import { Link } from "react-router-dom";
 import ShowAccounts from "../ShowAccounts";
 

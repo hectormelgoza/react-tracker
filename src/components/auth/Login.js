@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import classnames from "classnames";
+/* import classnames from "classnames"; */
 import Logo from "../../images/pt.svg"
 import { loginUser } from "../../actions/authActions";
 
@@ -56,7 +56,7 @@ class Login extends Component {
     return (
       <div className="login-container">
         <Link to="/" className="sign-in-logo">
-          <img src={Logo}/>
+         {/*  <img src={Logo}/> */}
         </Link>
 
         <div className="sign-in-msg">
